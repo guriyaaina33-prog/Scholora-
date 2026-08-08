@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Scholora — Learn Beyond Limits</title>
+<meta name="description" content="Scholora tuition academy — English, Computer Science, Urdu, Mathematics, Islamyat, Biology, Physics, Chemistry and Quran studies, from beginner to advanced.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,500&family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+  <div class="nav-bar">
+    <a href="#home" class="logo" onclick="goPage('home')"><span class="mark">S</span> Scholora</a>
+    <nav class="links" id="navLinks">
+      <a href="#home" onclick="goPage('home')">Home</a>
+      <a href="#about" onclick="goPage('about')">About us</a>
+      <a href="#subjects" onclick="goPage('subjects')">Subjects</a>
+      <a href="#teachers" onclick="goPage('teachers')">Teachers</a>
+      <a href="#student" onclick="goPage('student')">Student profile</a>
+      <a href="#contact" onclick="goPage('contact')">Contact us</a>
+      <a href="#admission" onclick="goPage('admission')">Admission</a>
+    </nav>
+    <div class="nav-extra">
+      <button id="modeToggle" aria-label="Toggle dark mode" onclick="toggleMode()"><i class="fa-solid fa-moon"></i></button>
+      <button class="hamburger" aria-label="Menu" onclick="toggleNav()"><i class="fa-solid fa-bars"></i></button>
+    </div>
+  </div>
+</header>
+
+<!-- ================= HOME ================= -->
+<main>
+<section id="home" class="page active">
+  <div class="hero">
+    <div class="wrap">
+      <div class="hero-margin">
+        <p class="eyebrow">Tuition academy · beginner to advanced</p>
+        <h1>Welcome to Scholora — where <em>learning</em> meets excellence</h1>
+        <p class="lead">Nine subjects, one campus of dedicated teachers, and a clear path from your first lesson to your best result — in English, Computer Science, Urdu, Mathematics, Islamyat, Biology, Physics, Chemistry, and Quran studies.</p>
+        <div class="hero-ctas">
+          <a class="btn btn-primary" href="#admission" onclick="goPage('admission')">Enroll now <i class="fa-solid fa-arrow-right"></i></a>
+          <a class="btn btn-ghost" href="#subjects" onclick="goPage('subjects')">Explore subjects</a>
+        </div>
+      </div>
+      <div style="position:relative;">
+        <div class="hero-card reveal">
+          <i class="fa-solid fa-quote-left"></i>
+          <p>"Scholora turned my daughter's weakest subject into her favourite one. The teachers actually notice when a concept hasn't landed."</p>
+          <p class="who" style="margin-top:14px; font-weight:600;">Farah A. <span style="font-weight:400; color:var(--muted);">Parent, Grade 9 student</span></p>
+        </div>
+        <div class="stamp"><b>12+</b><span>years teaching</span></div>
+      </div>
+    </div>
+
+    <div class="wrap">
+      <div class="stats-strip reveal">
+        <div class="stat"><b id="statStudents">0</b><span>Students taught</span></div>
+        <div class="stat"><b id="statTeachers">0</b><span>Expert teachers</span></div>
+        <div class="stat"><b id="statSubjects">0</b><span>Subjects offered</span></div>
+        <div class="stat"><b id="statYears">0</b><span>Years of experience</span></div>
+      </div>
+    </div>
+  </div>
+
+  <section class="section">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <p class="eyebrow">What we teach</p>
+        <h2>Nine subjects. One consistent standard.</h2>
+        <p>Every subject is taught in small groups with regular assessment, so progress is visible — not assumed.</p>
+      </div>
+      <div class="grid-4" id="homeSubjectGrid"></div>
+    </div>
+  </section>
+
+  <section class="section" style="padding-top:0;">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <p class="eyebrow">In their words</p>
+        <h2>Students and parents on Scholora</h2>
+      </div>
+      <div class="grid-3" id="testimonialGrid"></div>
+    </div>
+  </section>
+</section>
+
+<!-- ================= ABOUT ================= -->
+<section id="about" class="page">
+  <section class="section">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <p class="eyebrow">About Scholora</p>
+        <h2>Built for students who want more than a passing grade.</h2>
+      </div>
+      <div class="about-grid">
+        <div class="reveal">
+          <p style="color:var(--muted); margin-bottom:16px;">Scholora started as a small classroom of nine students and three subjects. Today it's a full academy, but the promise hasn't changed: no student moves on to a new topic until the last one has actually clicked.</p>
+          <p style="color:var(--muted);">We keep class sizes small, track progress subject by subject, and treat parents as partners rather than spectators. Whether a student is just starting out or preparing for board exams, our job is to close the exact gap that's holding them back.</p>
+        </div>
+        <div>
+          <div class="pillar reveal"><i class="fa-solid fa-bullseye"></i><div><h4 style="font-size:1rem;">Our mission</h4><p style="color:var(--muted); font-size:.92rem; margin-top:4px;">Make expert, personal teaching accessible to every student, at every level.</p></div></div>
+          <div class="pillar reveal"><i class="fa-solid fa-eye"></i><div><h4 style="font-size:1rem;">Our vision</h4><p style="color:var(--muted); font-size:.92rem; margin-top:4px;">A community where curiosity is rewarded and no question is too basic to ask.</p></div></div>
+          <div class="pillar reveal"><i class="fa-solid fa-seedling"></i><div><h4 style="font-size:1rem;">Our story</h4><p style="color:var(--muted); font-size:.92rem; margin-top:4px;">Founded by teachers who were tired of watching bright students fall through the cracks of large classrooms.</p></div></div>
+        </div>
+      </div>
+    </div>
+  </section>
+</section>
+
+<!-- ================= SUBJECTS ================= -->
+<section id="subjects" class="page">
+  <section class="section">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <p class="eyebrow">Subjects</p>
+        <h2>From first principles to exam mastery</h2>
+        <p>Tap any card to see what's covered at each level.</p>
+      </div>
+      <div class="grid-4" id="subjectGridFull"></div>
+    </div>
+  </section>
+</section>
+
+<!-- ================= TEACHERS ================= -->
+<section id="teachers" class="page">
+  <section class="section">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <p class="eyebrow">Teachers</p>
+        <h2>Meet the people behind the results</h2>
+      </div>
+      <div class="toolbar">
+        <input type="text" id="teacherSearch" placeholder="Search teachers by name..." oninput="renderTeachers()">
+        <select id="teacherFilter" onchange="renderTeachers()">
+          <option value="">All subjects</option>
+        </select>
+      </div>
+      <div class="grid-3" id="teacherGrid"></div>
+    </div>
+  </section>
+</section>
+
+<!-- ================= STUDENT PROFILE ================= -->
+<section id="student" class="page">
+  <section class="section">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <p class="eyebrow">Student profile</p>
+        <h2>Your Scholora dashboard</h2>
+        <p>Register once to see enrolled subjects, progress, and your weekly schedule. (Demo data — nothing here is sent anywhere.)</p>
+      </div>
+
+      <div class="dash-tabs">
+        <button class="active" onclick="showDashTab('register')" id="tabBtnRegister">Register / edit profile</button>
+        <button onclick="showDashTab('dashboard')" id="tabBtnDashboard">My dashboard</button>
+      </div>
+
+      <div class="dash-panel active" id="panelRegister">
+        <div class="form-card">
+          <form id="studentForm" onsubmit="return saveStudent(event)">
+            <div class="form-grid">
+              <div class="field"><label for="sName">Full name</label><input id="sName" required placeholder="e.g. Ayesha Khan"></div>
+              <div class="field"><label for="sDob">Date of birth</label><input id="sDob" type="date" required></div>
+              <div class="field"><label for="sGrade">Grade / class</label><input id="sGrade" required placeholder="e.g. Grade 9"></div>
+              <div class="field"><label for="sSubjects">Subjects enrolled</label>
+                <select id="sSubjects" multiple size="4"></select>
+              </div>
+              <div class="field"><label for="sAddress">Address</label><input id="sAddress" placeholder="Street, city"></div>
+              <div class="field"><label for="sGuardian">Parent / guardian contact</label><input id="sGuardian" placeholder="Name and phone"></div>
+              <div class="field"><label for="sEmail">Email address</label><input id="sEmail" type="email" required placeholder="you@example.com"></div>
+              <div class="field"><label for="sPhone">Phone number</label><input id="sPhone" required placeholder="03xx-xxxxxxx"></div>
+            </div>
+            <p class="form-note">Hold Ctrl / Cmd to select more than one subject.</p>
+            <button class="btn btn-primary" style="margin-top:20px;" type="submit">Save profile <i class="fa-solid fa-check"></i></button>
+          </form>
+        </div>
+      </div>
+
+      <div class="dash-panel" id="panelDashboard">
+        <div id="dashEmpty" class="form-card" style="text-align:center; display:none;">
+          <p style="color:var(--muted);">No profile saved yet — fill in the registration form to see your dashboard.</p>
+        </div>
+        <div id="dashContent" style="display:none;">
+          <div class="form-card" style="margin-bottom:24px;">
+            <div style="display:flex; gap:18px; align-items:center;">
+              <div class="avatar" id="dashAvatar" style="width:60px; height:60px; font-size:1.2rem;"></div>
+              <div>
+                <h3 id="dashName" style="font-size:1.2rem;"></h3>
+                <p style="color:var(--muted); font-size:.9rem;" id="dashMeta"></p>
+              </div>
+            </div>
+          </div>
+          <div class="form-card" style="margin-bottom:24px;">
+            <h4 style="margin-bottom:10px; font-size:1rem;">Progress by subject</h4>
+            <div id="progressList"></div>
+          </div>
+          <div class="form-card">
+            <h4 style="margin-bottom:10px; font-size:1rem;">This week's schedule <span class="chip">demo data</span></h4>
+            <div id="scheduleList"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</section>
+
+<!-- ================= CONTACT ================= -->
+<section id="contact" class="page">
+  <section class="section">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <p class="eyebrow">Contact us</p>
+        <h2>We usually reply within a day</h2>
+      </div>
+      <div class="contact-grid">
+        <div>
+          <div class="info-row reveal"><i class="fa-solid fa-location-dot"></i><div><b>Address</b><p style="color:var(--muted); font-size:.9rem;">14 Scholars Lane, near City Model School, Abbottabad</p></div></div>
+          <div class="info-row reveal"><i class="fa-solid fa-phone"></i><div><b>Phone</b><p style="color:var(--muted); font-size:.9rem;">+92 300 1234567</p></div></div>
+          <div class="info-row reveal"><i class="fa-solid fa-envelope"></i><div><b>Email</b><p style="color:var(--muted); font-size:.9rem;">hello@scholora.edu.pk</p></div></div>
+          <div class="info-row reveal"><i class="fa-brands fa-whatsapp"></i><div><b>WhatsApp</b><p style="color:var(--muted); font-size:.9rem;"><a href="https://wa.me/923001234567?text=Hi%20Scholora!%20I'm%20interested%20in%20enrolling..." target="_blank" style="color:var(--teal);">+92 300 1234567 — chat now</a></p></div></div>
+          <div class="info-row reveal"><i class="fa-solid fa-clock"></i><div><b>Working hours</b><p style="color:var(--muted); font-size:.9rem;">Mon–Sat, 9:00 AM – 8:00 PM</p></div></div>
+          <div class="map-box reveal"><i class="fa-solid fa-map" style="margin-right:8px;"></i> Google Maps embed placeholder</div>
+
+          <div style="margin-top:34px;">
+            <h4 style="margin-bottom:10px;">Frequently asked</h4>
+            <div id="faqList"></div>
+          </div>
+        </div>
+        <div class="form-card reveal">
+          <form onsubmit="return handleContact(event)">
+            <div class="form-grid">
+              <div class="field"><label>Name</label><input required placeholder="Your name"></div>
+              <div class="field"><label>Email</label><input type="email" required placeholder="you@example.com"></div>
+              <div class="field"><label>Phone</label><input required placeholder="03xx-xxxxxxx"></div>
+              <div class="field"><label>Subject of interest</label>
+                <select id="contactSubject"></select>
+              </div>
+              <div class="field full"><label>Message</label><textarea required placeholder="Tell us what you're looking for..."></textarea></div>
+            </div>
+            <button class="btn btn-primary" style="margin-top:18px;" type="submit">Send message <i class="fa-solid fa-paper-plane"></i></button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+</section>
+
+<!-- ================= ADMISSION ================= -->
+<section id="admission" class="page">
+  <section class="section">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <p class="eyebrow">Admission</p>
+        <h2>Enroll at Scholora</h2>
+        <p>Submit the form below and our team will call to confirm your schedule and fees.</p>
+      </div>
+      <div class="form-card">
+        <form onsubmit="return handleAdmission(event)">
+          <div class="form-grid">
+            <div class="field"><label>Student full name</label><input required placeholder="e.g. Bilal Ahmed"></div>
+            <div class="field"><label>Grade / class</label><input required placeholder="e.g. Grade 10"></div>
+            <div class="field"><label>Current level</label>
+              <select><option>Beginner</option><option>Intermediate</option><option>Advanced</option></select>
+            </div>
+            <div class="field"><label>Preferred subjects</label>
+              <select id="admissionSubjects" multiple size="4"></select>
+            </div>
+            <div class="field"><label>Parent / guardian name</label><input placeholder="Full name"></div>
+            <div class="field"><label>Contact number</label><input required placeholder="03xx-xxxxxxx"></div>
+            <div class="field full"><label>Anything we should know?</label><textarea placeholder="Learning goals, scheduling constraints, etc."></textarea></div>
+          </div>
+          <button class="btn btn-primary" style="margin-top:20px;" type="submit">Submit application <i class="fa-solid fa-arrow-right"></i></button>
+        </form>
+      </div>
+    </div>
+  </section>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div>
+      <div class="logo" style="color:var(--paper);"><span class="mark" style="background:var(--paper); color:var(--ink);">S</span> Scholora</div>
+      <p style="color:#c8cdd3; font-size:.88rem; margin-top:14px; max-width:280px;">A tuition academy for students who want to actually understand the subject — not just pass it.</p>
+      <div class="social-row">
+        <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+        <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+        <a href="https://wa.me/923001234567" target="_blank" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+      </div>
+    </div>
+    <div>
+      <h4>Quick links</h4>
+      <a href="#about" onclick="goPage('about')">About us</a>
+      <a href="#subjects" onclick="goPage('subjects')">Subjects</a>
+      <a href="#teachers" onclick="goPage('teachers')">Teachers</a>
+      <a href="#admission" onclick="goPage('admission')">Admission</a>
+    </div>
+    <div>
+      <h4>Subjects</h4>
+      <a href="#subjects" onclick="goPage('subjects')">Mathematics</a>
+      <a href="#subjects" onclick="goPage('subjects')">Physics</a>
+      <a href="#subjects" onclick="goPage('subjects')">Computer Science</a>
+      <a href="#subjects" onclick="goPage('subjects')">Quran studies</a>
+    </div>
+    <div>
+      <h4>Contact</h4>
+      <a href="#contact" onclick="goPage('contact')">hello@scholora.edu.pk</a>
+      <a href="#contact" onclick="goPage('contact')">+92 300 1234567</a>
+      <a href="#contact" onclick="goPage('contact')">Abbottabad campus</a>
+    </div>
+  </div>
+  <p class="foot-bottom">© 2026 Scholora Academy. All rights reserved. Built with care for students who ask "why".</p>
+</footer>
+
+<a href="https://wa.me/923001234567?text=Hi%20Scholora!%20I'm%20interested%20in%20enrolling..." target="_blank" id="waFloat" aria-label="Chat on WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+<button id="toTop" aria-label="Back to top" onclick="window.scrollTo({top:0,behavior:'smooth'})"><i class="fa-solid fa-arrow-up"></i></button>
+
+<script src="script.js"></script>
+</body>
+</html>
